@@ -19,7 +19,7 @@ class InterviewAssistant:
     def load_questions(self, questions_path):
         """Load and preprocess the questions dataset."""
         self.questions = pd.read_csv(questions_path, encoding='unicode_escape')
-        self.questions = self.questions[['Question', 'Answer']]
+        self.questions = self.questions[['Question']]
         
     def setup_models(self, groq_api_key):
         """Initialize all required models."""
