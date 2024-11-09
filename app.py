@@ -83,7 +83,7 @@ class InterviewApp:
     def __init__(self):
         self.assistant = InterviewAssistant(
             questions_path='non_technical_interview_questions.csv',
-            groq_api_key=os.getenv('GROQ_API_KEY')
+            groq_api_key=st.secrets["GROQ_API_KEY"]
         )
         self.current_question = 0
         self.questions = []
